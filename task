@@ -1,0 +1,36 @@
+Задание
+Реализовать REST API сервис Accounts на базе Spray.
+Запросы и ответы сервиса должны быть в JSON формате.
+Базу данных реализовать на MongoDB с использованием библиотеки ReactiveMongo.
+Шаблон кода сервиса и тестов прилагается.
+
+Table Scheme
+id
+enabled - user activity
+login - user login in the system
+email - email in the system
+name - user name
+surname - user surname
+roles - list of roles
+groups - list of groups
+permissions – list of accesses
+info - user information, composite field
+created – date time of account creation
+hash - password hash
+session_time - time of user session. 15 minutes by default.
+
+API
+create - user creating.
+update - information updating.
+update_password - password updating.
+profile/update_password - updating password by user.
+profile/update_info - updating information about user by user.
+list - obtaining a complete list of users with the ability to filter them.
+enable - unblocking user.  
+disable - blocking user
+insert_group - adding user to group.
+delete_group - removing user from group.
+insert_role - adding role *
+delete_role - removing role. 
+session_time - get session time.
+permissions - a list of permissions.
